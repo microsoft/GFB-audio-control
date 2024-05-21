@@ -1,0 +1,13 @@
+relative_path,split,T60_WB,C50_WB,delay_in_samples
+h_16k.wav,train,0.01,5,0
+h_16k.wav,train,0.1,5,0
+h_16k.wav,train,0.2,5,0
+h_16k.wav,train,0.3,5,0
+h_16k.wav,train,0.4,5,0
+h_16k.wav,train,0.5,5,0
+h_16k.wav,train,0.6,5,0
+h_16k.wav,train,0.7,5,0
+h_16k.wav,train,0.8,5,0
+h_16k.wav,train,0.9,5,0
+h_16k.wav,train,1,5,0
+h_test_16k.wav,test,0.5,15,0

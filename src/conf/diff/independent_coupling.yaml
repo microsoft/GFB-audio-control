@@ -1,0 +1,11 @@
+_target_: diffusion.OTCFM.OTCFM
+
+cfg_value: -999
+minibatch_OT: False
+order: 2
+minibatch_OT_args:
+  chunk_size: 256
+  n_noise_samples: 8192
+  distance: 'l2'
+  dist_compute_num: 1024
+  algorithm: 'sinkhorn'

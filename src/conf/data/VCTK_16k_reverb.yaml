@@ -1,0 +1,16 @@
+dataset:
+  _target_: datasets.datasets.AudioDatasetInfinite_VCTK_Reverb
+  segment_length: 65536
+  fs: 16000
+  path: dummy_dataset/VCTK_examples
+  sigma_data: 0.05 #for normalization purposes
+  path_RIR: dummy_dataset/RIRs
+  RIR_file: dummy_dataset/RIRs/RIR_file.csv
+  normalize_RIR: True
+  T60_margin: [0, 1]
+  T60_divisions: 10
+  T60_uniform: True
+  h_length: 16000 #defined length of RIRs
+  apply_random_gain: True #apply random gain to RIRs as augmentation
+  random_gain: [-2, 2] #min and max gain in dB
+  percentage_anechoic: 10

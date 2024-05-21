@@ -1,0 +1,31 @@
+
+defaults:
+  - data: VCTK_16k_clipping
+  # diffusion model architecture
+  - backbone: STFTbackbone_1cond
+  # includes details about the experiment
+  - exp: VCTK_clipping
+  # includes details about the diffusion model
+  - diff: OT_coupling
+  # logging configuration
+  - log: base_logging
+  # tester configuration
+  - tester: clipping_bridge
+
+save_path: "experiments/clipping_test" #path were all the training data will be saved. Must be overriden
+run_id: 1 #id that identifies the run.
+run_name: "speech_clipping" #understandable name of the run.
+checkpoint: "None"
+
+#backbone.dnn.num_cond_params: 2
+
+hydra:
+  job:
+    config:
+      # configuration for the ${hydra.job.override_dirname} runtime variable
+      override_dirname:
+        kv_sep: '='
+        item_sep: ','
+        # Remove all paths, as the / in them would mess up things
+        exclude_keys: ['path_experiment',
+          'hydra.job_logging.handles.file.filename']

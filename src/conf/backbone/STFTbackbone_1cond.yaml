@@ -1,0 +1,19 @@
+dnn:
+  _target_: backbones.STFTbackbone.STFTbackbone
+  stft_args:
+    win_length: 510
+    hop_length: 128
+
+  depth: 7
+  emb_dim: 256
+  use_norm: True
+
+  Ns: [64, 128, 256, 512, 512, 512, 512]
+  Ss: [2, 2, 2, 2, 2, 2, 2]
+  num_dils: [1, 1, 1, 1, 1, 1, 1]
+  bottleneck_type: "res_dil_convs"
+  num_bottleneck_layers: 1
+
+  time_conditional: True
+  param_conditional: True
+  num_cond_params: 1

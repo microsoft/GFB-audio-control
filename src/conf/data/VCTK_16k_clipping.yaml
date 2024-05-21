@@ -1,0 +1,12 @@
+
+dataset:
+  _target_: datasets.datasets.AudioDatasetInfinite_VCTK_clip
+  segment_length: 65536
+  fs: 16000
+  path: dummy_dataset/VCTK_examples
+  sigma_data: 0.05 #for normalization purposes
+  apply_random_gain: True #apply random gain to RIRs as augmentation
+  random_gain: [-2, 2] #min and max gain in dB
+  percentage_clean: 10
+ 
+

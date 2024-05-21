@@ -1,0 +1,4 @@
+save_model: True
+save_interval: 10000 #interval in which the model is saved
+heavy_log_interval: 20
+log_interval: 10 #interval in which the logs are saved

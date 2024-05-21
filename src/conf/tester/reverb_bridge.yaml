@@ -1,0 +1,20 @@
+modes: ["bridge_reverb","unconditional"] #["T60_C50","unconditional"]
+T: 25
+batch: 4
+checkpoint: "checkpoint_latest.pt"
+segment_length: 65536
+
+CFG: 1.0
+
+
+bridge_end_t: 1 # if it is lower than 1 the forward ODE will stop at that time, and the backward ODE will start from that time
+  
+T60s: [    0.7,   0.3,  0.1 , 0]
+C50s: [   5,     15,   25,  50]
+
+schedule: "cosine"
+
+test_audio_example:  ["dummy_dataset/VCTK_examples/p361_002_mic1_16k.wav","dummy_dataset/VCTK_examples/p360_001_mic1_16k.wav" ]
+
+
+test_RIR_example: [ "dummy_dataset/RIRs/h_test_16k.wav", "dummy_dataset/RIRs/h_16k.wav" ]
