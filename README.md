@@ -2,6 +2,8 @@
 
 Audio domain transfer is the process of modifying audio signals to match characteristics of a different domain, while retaining the original content. This paper investigates the potential of Gaussian Flow Bridges, an emerging approach in generative modeling, for this problem. The presented framework addresses the transport problem across different distributions of audio signals through the implementation of a series of two deterministic probability flows. The proposed framework facilitates manipulation of the target distribution properties through a continuous control variable, which defines a certain aspect of the target domain. Notably, this approach does not rely on paired examples for training. To address identified challenges on maintaining the speech content consistent, we recommend a training strategy that incorporates chunk-based minibatch Optimal Transport couplings of data samples and noise. Comparing our unsupervised method with established baselines, we find competitive performance in tasks of reverberation and distortion manipulation.Despite encoutering limitations, the intriguing results obtained in this study underscore potential for further exploration.
 
+![](assets/diagram.png)
+
 In this repository, we provide the sample code to train a Gaussian Flow Bridge (GFB) for controlling speech reverberation or clipping, presented in the paper ["Gaussian Flow Bridges for audio domain transfer with unpaired data"](https://) submitted to IEEE IWAENC 2024. 
 We hope this sample code enables reproducibility of our proposed method and results and invites further work on the topic of audio domain transfer.
 The samples folder includes some audio examples. 
@@ -37,7 +39,7 @@ The purpose of this sample code is to enable reproducibility of our method and r
 
 ### Project data 
 
-The sample folder contains a selection of audio samples illustrating the performance of the proposed model. The samples are taken from the publicly available [DAPS dataset](https://zenodo.org/records/4660670). 
+The sample folder contains a selection of audio samples illustrating the performance of the proposed model. The samples are taken from the publicly available [DAPS dataset](https://zenodo.org/records/4660670), and [GuitarSet](https://zenodo.org/records/3371780).
 
 ### Fairness and Responsible AI testing 
 
@@ -49,7 +51,7 @@ When systems are deployed, Responsible AI testing should be performed to ensure 
 
 ## Contributing
 
-This code has been created as part of a summer intern project by Eloi Moliner ( email ), Ph.D. Student, Aalto University, Finland
+This code has been created as part of a summer intern project by Eloi Moliner (eloi.moliner@aalto.fi), Ph.D. Student, Aalto University, Finland
 
 ---
 
@@ -67,19 +69,43 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 ## Requirements
 
-We recommend using the [Anaconda](https://docs.anaconda.com/anaconda/install/) distribution for python dependencies. The code should work will any recent version. In addition, the following packages are required:
+We recommend using the [Anaconda](https://docs.anaconda.com/anaconda/install/) distribution for python dependencies. The code should work will any recent version, but it was tested with Python 3.9.19. The required packages are listed in `requirements.txt`, and can be installed by running the following command:
 
-- Pytorch (https://pytorch.org/) -> All recent versions should work. Tested on 1.8 and newers. 
-- Click (`pip install click`) -> All recent versions should work. Tested on 6.5 and newers.
-- Pyprind (`pip install PyPrind`) -> All versions should work. 
+
+```bash
+pip install -e .
+pip install -r requirements.txt 
+```
+
 
 ## How to use
 
-### Step 0) Data Preparation: 
+### Training 
+
+To train the models, follow these steps:
+
+1. Integrate your dataset by modifying `datasets/datasets.py` and adding a configuration file in `conf/datasets/new_dataset.yaml`.
+2. Run the training scripts for the experiments reported in the paper:
+
+```bash
+# Speech reverberation
+python src/train.py --config-name=conf_speech_reverb.yaml
+
+# Speech clipping
+python src/train.py --config-name=conf_speech_clipping.yaml
+```
+
 
 ---
 
-### Step 1) Train the Gaussian Diffusion Bridge model
+### Inference 
+
+To perform inference, adjust the test parameters by adding a new tester configuration file in `conf/tester/{}.yaml` or modifying an existing one. Then, run the inference as follows:
+
+```bash
+python src/test.py --config-name=conf_speech_reverb.yaml --tester=reverb_bridge.yaml --checkpoint=$checkpoint_filename
+```
+
 
 -----
 
