@@ -1,23 +1,6 @@
 # Gaussian Flow Bridges for audio domain transfer with unpaired data
 
-Audio domain transfer is the process of modifying audio signals
-to match characteristics of a different domain, while retaining the
-original content. This paper investigates the potential of Gaussian
-Flow Bridges, an emerging approach in generative modeling, for this
-problem. The presented framework addresses the transport prob-
-lem across different distributions of audio signals through the im-
-plementation of a series of two deterministic probability flows. The
-proposed framework facilitates manipulation of the target distribu-
-tion properties through a continuous control variable, which defines
-a certain aspect of the target domain. Notably, this approach does
-not rely on paired examples for training. To address identified chal-
-lenges on maintaining the speech content consistent, we recommend
-a training strategy that incorporates chunk-based minibatch Optimal
-Transport couplings of data samples and noise. Comparing our un-
-supervised method with established baselines, we find competitive
-performance in tasks of reverberation and distortion manipulation.
-Despite encoutering limitations, the intriguing results obtained in
-this study underscore potential for further exploration.
+Audio domain transfer is the process of modifying audio signals to match characteristics of a different domain, while retaining the original content. This paper investigates the potential of Gaussian Flow Bridges, an emerging approach in generative modeling, for this problem. The presented framework addresses the transport problem across different distributions of audio signals through the implementation of a series of two deterministic probability flows. The proposed framework facilitates manipulation of the target distribution properties through a continuous control variable, which defines a certain aspect of the target domain. Notably, this approach does not rely on paired examples for training. To address identified challenges on maintaining the speech content consistent, we recommend a training strategy that incorporates chunk-based minibatch Optimal Transport couplings of data samples and noise. Comparing our unsupervised method with established baselines, we find competitive performance in tasks of reverberation and distortion manipulation.Despite encoutering limitations, the intriguing results obtained in this study underscore potential for further exploration.
 
 In this repository, we provide the sample code to train a Gaussian Flow Bridge (GFB) for controlling speech reverberation or clipping, presented in the paper ["Gaussian Flow Bridges for audio domain transfer with unpaired data"](https://) submitted to IEEE IWAENC 2024. 
 We hope this sample code enables reproducibility of our proposed method and results and invites further work on the topic of audio domain transfer.
