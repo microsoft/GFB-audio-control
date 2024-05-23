@@ -27,6 +27,9 @@ This paper can also be found on arXiv at [...](...).
 
 [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct)
 
+
+[Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)
+
 -----
 
 ## Responsible AI Transparency Information 
