@@ -52,6 +52,12 @@ When systems are deployed, Responsible AI testing should be performed to ensure 
 
 > Note: The documentation included in this ReadMe file is for informational purposes only and is not intended to supersede the applicable license terms. 
 
+### Limitations
+
+The proposed model was trained and evaluated on clean recordings of English speech. It may fail for other languages or acoustic conditions without retraining. Even for English speech, the model may occasionally introduce acoustic or semantic distortions, or alter the perceived speaker identity. For input other than noise-free English speech, the model behaviour is undefined.
+
+The code published in this repository is intended purely to illustrate the methods introduced in the accompanying publication. 
+
 ## Contributing
 
 This code has been created as part of a summer intern project by Eloi Moliner (eloi.moliner@aalto.fi), Ph.D. Student, Aalto University, Finland
