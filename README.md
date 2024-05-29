@@ -118,5 +118,4 @@ python src/test.py --config-name=conf_speech_reverb.yaml --tester=reverb_bridge.
 
 -----
 
-### Step 2) Run evaluation scripts
 
