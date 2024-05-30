@@ -6,7 +6,7 @@ Audio domain transfer is the process of modifying audio signals to match charact
 
 In this repository, we provide the sample code to train a Gaussian Flow Bridge (GFB) for controlling speech reverberation or clipping, presented in the paper ["Gaussian Flow Bridges for audio domain transfer with unpaired data"](https://) submitted to IEEE IWAENC 2024. 
 We hope this sample code enables reproducibility of our proposed method and results and invites further work on the topic of audio domain transfer.
-The samples folder includes some audio examples. 
+Audio examples are available at the [website](https://animated-engine-93533o6.pages.github.io/dist/) 
 
 ## Paper
 If you use this code in your research please cite the following [publication](https://):
@@ -42,7 +42,7 @@ The purpose of this sample code is to enable reproducibility of our method and r
 
 ### Project data 
 
-The sample folder contains a selection of audio samples illustrating the performance of the proposed model. The samples are taken from the publicly available [DAPS dataset](https://zenodo.org/records/4660670), and [GuitarSet](https://zenodo.org/records/3371780).
+The companion [website](https://animated-engine-93533o6.pages.github.io/dist/) contains a selection of audio samples illustrating the performance of the proposed model. The samples are taken from the publicly available [DAPS dataset](https://zenodo.org/records/4660670), and [GuitarSet](https://zenodo.org/records/3371780).
 
 ### Fairness and Responsible AI testing 
 
