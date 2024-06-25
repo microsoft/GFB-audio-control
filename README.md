@@ -42,7 +42,7 @@ The purpose of this sample code is to enable reproducibility of our method and r
 
 ### Project data 
 
-The companion [website](https://animated-engine-93533o6.pages.github.io/dist/) contains a selection of audio samples illustrating the performance of the proposed model. The samples are taken from the publicly available [DAPS dataset](https://zenodo.org/records/4660670), and [GuitarSet](https://zenodo.org/records/3371780).
+The companion [website](https://microsoft.github.io/GFB-audio-control/dist) contains a selection of audio samples illustrating the performance of the proposed model. The samples are taken from the publicly available [DAPS dataset](https://zenodo.org/records/4660670), and [GuitarSet](https://zenodo.org/records/3371780).
 
 ### Fairness and Responsible AI testing 
 
