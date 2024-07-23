@@ -115,6 +115,19 @@ To perform inference, adjust the test parameters by adding a new tester configur
 python src/test.py --config-name=conf_speech_reverb.yaml --tester=reverb_bridge.yaml --checkpoint=$checkpoint_filename
 ```
 
+### Trained models
+
+We provide the checkpoints corresponding to the models evaluated in the paper. They can be downloaded as follows:
+
+```bash
+wget $ckpt_url #Model trained on reverberant speech using Conditional Flow Matching and independent couplings
+wget $ckpt_url #Model trained on reverberant speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=512
+wget $ckpt_url #Model trained on reverberant speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=256
+wget $ckpt_url #Model trained on reverberant speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=128
+wget $ckpt_url #Model trained on clipped (and clean) speech using Conditional Flow Matching and independent couplings
+wget $ckpt_url #Model trained on clipped (and clean) speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=512
+```
+
 
 -----
 
