@@ -120,12 +120,12 @@ python src/test.py --config-name=conf_speech_reverb.yaml --tester=reverb_bridge.
 We provide the checkpoints corresponding to the models evaluated in the paper. They can be downloaded as follows:
 
 ```bash
-wget $ckpt_url #Model trained on reverberant speech using Conditional Flow Matching and independent couplings
-wget $ckpt_url #Model trained on reverberant speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=512
-wget $ckpt_url #Model trained on reverberant speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=256
-wget $ckpt_url #Model trained on reverberant speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=128
-wget $ckpt_url #Model trained on clipped (and clean) speech using Conditional Flow Matching and independent couplings
-wget $ckpt_url #Model trained on clipped (and clean) speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=512
+wget https://github.com/microsoft/GFB-audio-control/releases/download/public_weights/checkpoint_299999_speech_reverb_IndepCoupling.pt #Model trained on reverberant speech using Conditional Flow Matching and independent couplings
+wget https://github.com/microsoft/GFB-audio-control/releases/download/public_weights/checkpoint_299999_speech_reverb_C-OT_Nc512.pt #Model trained on reverberant speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=512
+wget https://github.com/microsoft/GFB-audio-control/releases/download/public_weights/checkpoint_299999_speech_reverb_C-OT_NC256.pt #Model trained on reverberant speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=256
+wget https://github.com/microsoft/GFB-audio-control/releases/download/public_weights/checkpoint_299999_speech_reverb_C-OT_NC128.pt #Model trained on reverberant speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=128
+wget https://github.com/microsoft/GFB-audio-control/releases/download/public_weights/checkpoint_299999_speech_clipping_IndepCoupling.pt #Model trained on clipped (and clean) speech using Conditional Flow Matching and independent couplings
+wget https://github.com/microsoft/GFB-audio-control/releases/download/public_weights/checkpoint_299999_speech_clipping_C-OT.pt #Model trained on clipped (and clean) speech using Conditional Flow Matching and Chunked-OT couplings with chunk size Nc=512
 ```
 
 
