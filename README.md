@@ -4,7 +4,7 @@ Audio domain transfer is the process of modifying audio signals to match charact
 
 ![](assets/diagram.png)
 
-In this repository, we provide the sample code to train a Gaussian Flow Bridge (GFB) for controlling speech reverberation or clipping, presented in the paper ["Gaussian Flow Bridges for audio domain transfer with unpaired data"]([https://](https://arxiv.org/abs/2405.19497)) submitted to IEEE IWAENC 2024. 
+In this repository, we provide the sample code to train a Gaussian Flow Bridge (GFB) for controlling speech reverberation or clipping, presented in the paper ["Gaussian Flow Bridges for audio domain transfer with unpaired data"](https://arxiv.org/abs/2405.19497) submitted to IEEE IWAENC 2024. 
 We hope this sample code enables reproducibility of our proposed method and results and invites further work on the topic of audio domain transfer.
 Audio examples are available at [https://microsoft.github.io/GFB-audio-control/dist](https://microsoft.github.io/GFB-audio-control/dist) 
 
